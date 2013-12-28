@@ -1,0 +1,26 @@
+<!:=EN-US>
+>: ls(^['BASE'])
+>: $schema=/var/Www/psyp/schema.html
+>: $style=/var/www/psyp/style.css
+>: gen:/var/www/psyp/gen.html $style@$schema ($final)
+!: Gen:0
+>: say $final
+!:
+--  <DOCTYPE html>
+--  <html lang="en">
+--    <head>
+--      <meta charset="utf-8" />
+--      <title>Genatest</title>
+--      <style type="text/css">
+--        * {
+--          margin:0;
+--          padding:0;
+--        }
+--      </style>
+--    </head>
+--    <body>
+--      <p>Blabla</p>
+--    </body>
+--  </html>
+:!
+>:Sendmail=$final@khalv@europe.com
