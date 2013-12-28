@@ -1,0 +1,18 @@
+div#announcementbox {
+  background-color:#xxx
+  border-bottom:1px #yyy solid;
+  box-shadow:0px 0px 50px #zzz;
+    -moz-box-shadow:0px 0px 50px #zzz;
+    -webkit-box-shadow:0px 0px 50px #zzz;
+    -gecko-box-shadow:0px 0px 50px #zzz;
+}
+
+div#announcementbox2 {
+  background-color:#xxa
+  border-bottom:1px #yya solid;
+  box-shadow:0px 0px 50px #zza;
+    -moz-box-shadow:0px 0px 50px #zza;
+    -webkit-box-shadow:0px 0px 50px #zza;
+    -gecko-box-shadow:0px 0px 50px #zza;
+}
+  
