@@ -1,0 +1,50 @@
+<!-- This plugin is under Kopimi License, use it without my permission and fork that <3 -->
+
+// Inclusion du fichier de configuration
+  <!-- INCLUDE xxx_config.html -->
+  
+// Est-ce que la barre est activée dans le fichier de configuration ?
+<!-- IF $M_ALLOW_TOP_BAR == 'yes' -->
+  
+  // Si oui, on regarde si la barre est privée.
+	<!-- IF $M_TOP_BAR_PRIVATE == 'yes' -->
+	  
+	  // Dans ce cas on check si l'utilisateur est connecté.
+		<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
+		  
+		  // Enfin, si la barre est définie comme importante, on la rend rouge (style.css)(2)
+  			<!-- IF $M_RED_TOP_BAR == 'yes' -->
+  				<div id="announcementbox2">
+  					<p>{$M_TEXT_BAR}</p>
+  				</div>
+		  	<!-- ENDIF -->
+		  
+		  // Si la barre est définie comme normale, on la rend verte (style.css).
+  			<!-- IF $M_RED_TOP_BAR == 'no' -->
+  				<div id="announcementbox">
+  					<p>{$M_TEXT_BAR}</p>
+  				</div>
+  			<!-- ENDIF -->
+  			
+		<!-- ENDIF -->
+	<!-- ENDIF -->
+	
+	// Si la barre n'est pas définie comme privée, on ne demande pas la connexion.
+  	<!-- IF $M_TOP_BAR_PRIVATE == 'no' -->
+	
+	  // Si la barre est définie comme importante, on la rend rouge.
+  		<!-- IF $M_RED_TOP_BAR == 'yes' -->
+  			<div id="announcementbox2">
+  				<p>{BARTEXTLOL}</p>
+  			</div>
+  		<!-- ENDIF -->
+  	// Si la barre est normale, on la rend... ben verte morai.
+  		<!-- IF $M_RED_TOP_BAR == 'no' -->
+  			<div id="announcementbox">
+  				<p>{BARTEXTLOL}</p>
+  			</div>
+  		<!-- ENDIF -->
+	<!-- ENDIF -->
+<!-- ENDIF -->
+
+// Ne pas oublier de supprimer tous les commentaires lors de la copie du script!
